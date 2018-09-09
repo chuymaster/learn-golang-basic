@@ -1,14 +1,19 @@
 package main
 
-import (
-	"fmt"
-)
-
 func main() {
-	card := newCard()
-	fmt.Println(card)
-}
+	// cards := deck{newCard(), newCard(), "Ace of Diamonds"}
+	// cards = append(cards, "Six of Spades")
 
-func newCard() string {
-	return "Five of Diamonds"
+	cards := newDeck()
+	// cards.saveToFile("my_cards")
+
+	// cards := newDeckFromFile("my_cards")
+
+	// cards.print()
+
+	hand, _ := deal(cards, 5)
+
+	hand.print()
+	// remainingCards.print()
+
 }
